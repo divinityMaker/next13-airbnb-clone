@@ -2,7 +2,7 @@
 
 import { AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
 import { signIn } from "next-auth/react";
@@ -53,6 +53,11 @@ const LoginModal: React.FC = () => {
     });
   };
 
+  const toggle = useCallback(() => {
+    loginModal.onClose();
+    registerModal.onOpen();
+  }, [loginModal, registerModal]);
+
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Heading title="Welcome back" subtitle="Login to your account!" />
@@ -93,12 +98,12 @@ const LoginModal: React.FC = () => {
       />
       <div className="text-neutral-500 text-center mt-4 font-light">
         <div className="justify-center flex flex-row items-center gap-2">
-          <div>Already have an account?</div>
+          <div>First time using Airbnb?</div>
           <div
-            onClick={registerModal.onClose}
+            onClick={toggle}
             className="text-neutral-800 cursor-pointer hover:underline"
           >
-            Log in
+            Create an account
           </div>
         </div>
       </div>
@@ -111,7 +116,7 @@ const LoginModal: React.FC = () => {
       isOpen={loginModal.isOpen}
       title={"Login"}
       actionLabel={"Continue"}
-      onClose={registerModal.onClose}
+      onClose={loginModal.onClose}
       onSubmit={handleSubmit(onSubmit)}
       body={bodyContent}
       footer={footerContent}
