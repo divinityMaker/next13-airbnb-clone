@@ -30,10 +30,8 @@ const CategoryInput: React.FC<ICategoryInput> = ({
       ${selected ? "border-black" : "border-neutral-200"}
       `}
     >
-        <Icon size={30} />
-        <div className="font-semibold">
-            {label}
-        </div>
+      <Icon size={30} />
+      <div className="font-semibold">{label}</div>
     </div>
   );
 };
