@@ -10,7 +10,7 @@ import { SafeListing, SafeReservation, SafeUser } from "@/app/types";
 import axios from "axios";
 import { differenceInCalendarDays, eachDayOfInterval } from "date-fns";
 import { useRouter } from "next/navigation";
-import { use, useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Range } from "react-date-range";
 import { toast } from "react-hot-toast";
 
@@ -70,8 +70,7 @@ const ListingClient: React.FC<IListingClient> = ({
       .then(() => {
         toast.success("Listing reserved!");
         setDateRange(initialDateRange);
-        //redirect to /trips
-        router.refresh();
+        router.push('/trips')
       })
       .catch(() => {
         toast.error("Something went wrong.");

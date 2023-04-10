@@ -40,7 +40,7 @@ const ListingReservation: React.FC<IListingReservation> = ({
         items-center
         gap-1
         p-4
-    "
+      "
       >
         <div
           className="
