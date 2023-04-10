@@ -105,7 +105,7 @@ const RentModal: React.FC = () => {
   };
 
   const actionLabel = useMemo(() => {
-    if (step === STEPS.PRICE) return "Crate";
+    if (step === STEPS.PRICE) return "Create";
 
     return "Next";
   }, [step]);
