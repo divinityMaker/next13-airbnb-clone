@@ -14,11 +14,11 @@ import { toast } from "react-hot-toast";
 import Button from "../Button";
 
 import { signIn } from "next-auth/react";
-import useLoginModel from "@/app/hooks/useLoginModal";
+import useLoginModal from "@/app/hooks/useLoginModal";
 
 const RegisterModal: React.FC = () => {
   const registerModal = useRegisterModal();
-  const loginModal = useLoginModel();
+  const loginModal = useLoginModal();
 
   const [isLoading, setIsLoading] = useState(false);
 

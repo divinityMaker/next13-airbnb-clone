@@ -14,12 +14,12 @@ import Heading from "../Heading";
 import Input from "../inputs/Input";
 import { toast } from "react-hot-toast";
 import Button from "../Button";
-import useLoginModel from "@/app/hooks/useLoginModal";
+import useLoginModal from "@/app/hooks/useLoginModal";
 
 const LoginModal: React.FC = () => {
   const router = useRouter();
   const registerModal = useRegisterModal();
-  const loginModal = useLoginModel();
+  const loginModal = useLoginModal();
 
   const [isLoading, setIsLoading] = useState(false);
 

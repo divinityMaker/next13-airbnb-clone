@@ -5,7 +5,7 @@ import Avatar from "../Avatar";
 import { useCallback, useState } from "react";
 import MenuItem from "./MenuItem";
 import useRegisterModal from "@/app/hooks/useRegisterModal";
-import useLoginModel from "@/app/hooks/useLoginModal";
+import useLoginModal from "@/app/hooks/useLoginModal";
 import { signOut } from "next-auth/react";
 
 import { SafeUser } from "@/app/types";
@@ -17,7 +17,7 @@ interface IUserMenu {
 
 const UserMenu: React.FC<IUserMenu> = ({ currentUser }) => {
   const registerModal = useRegisterModal();
-  const loginModal = useLoginModel();
+  const loginModal = useLoginModal();
   const rentModal = useRentModal();
   const [isOpen, setIsOpen] = useState(false);
 
