@@ -69,7 +69,7 @@ const ListingReservation: React.FC<IListingReservation> = ({
         p-4
       "
       >
-        <Button disabled label="Reserve" onClick={onSubmit} />
+        <Button disabled={disabled} label="Reserve" onClick={onSubmit} />
       </div>
       <div
         className="
