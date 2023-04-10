@@ -26,7 +26,7 @@ const EmptyState: React.FC<IEmptyState> = ({
         gap-2
         justify-center
         items-center
-    "
+      "
     >
       <Heading center title={title} subtitle={subtitle} />
       <div className="w-48 mt-4">
