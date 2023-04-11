@@ -14,7 +14,10 @@ interface IPropertiesClient {
   currentUser?: SafeUser | null;
 }
 
-const PropertiesClient: React.FC<IPropertiesClient> = ({ listings, currentUser }) => {
+const PropertiesClient: React.FC<IPropertiesClient> = ({
+  listings,
+  currentUser,
+}) => {
   const router = useRouter();
   const [deletingId, setDeletingId] = useState("");
 
@@ -40,10 +43,7 @@ const PropertiesClient: React.FC<IPropertiesClient> = ({ listings, currentUser }
 
   return (
     <Container>
-      <Heading
-        title="Properties"
-        subtitle="List of your properties"
-      />
+      <Heading title="Properties" subtitle="List of your properties" />
       <div
         className="
         mt-10
